@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "-web-portoflio": "file:",
     "@prisma/client": "^6.4.1",
     "@radix-ui/react-label": "^2.1.2",
     "@radix-ui/react-slot": "^1.1.2",
@@ -23,6 +24,7 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-icons": "^5.5.0",
+    "react-three-fiber": "^6.0.13",
     "shadcn": "^2.4.0-canary.11",
     "sonner": "^2.0.1",
     "tailwind-merge": "^3.0.2",

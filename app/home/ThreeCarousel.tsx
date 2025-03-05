@@ -1,6 +1,6 @@
 "use client";
-import { useRef, useEffect, useMemo } from "react";
-import { Canvas, useFrame } from "@react-three/fiber";
+import { useRef, useEffect, useMemo, Suspense } from "react";
+import { Canvas } from "@react-three/fiber";
 import { Plane, Text, useTexture } from "@react-three/drei";
 import * as THREE from "three";
 import gsap from "gsap";
@@ -16,7 +16,6 @@ const images = [
   "/images/image5.png"
 ];
 
-
 function Carousel() {
   return (
     <Canvas
@@ -26,7 +25,12 @@ function Carousel() {
       <ambientLight intensity={0.8} />
       <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
       <directionalLight position={[-5, 5, 5]} intensity={0.8} />
-      <ImageCarousel />
+      
+      {/* Ensure textures load properly */}
+      <Suspense fallback={null}>
+        <ImageCarousel />
+      </Suspense>
+      
       <TextRibbon />
     </Canvas>
   );
@@ -37,7 +41,7 @@ function ImageCarousel() {
   const textures = useTexture(images);
 
   const positions = useMemo(() => {
-    const radius = 4; // Reduce radius for closer positioning
+    const radius = 4;
     return images.map((_, index) => {
       const angle = ((index - images.length / 2) / images.length) * Math.PI;
       return {
@@ -50,10 +54,10 @@ function ImageCarousel() {
       };
     });
   }, []);
-  
+
   useEffect(() => {
     if (!groupRef.current) return;
-  
+
     gsap.to(groupRef.current.rotation, {
       y: "+=1",
       scrollTrigger: {
@@ -63,8 +67,6 @@ function ImageCarousel() {
         scrub: 1,
       },
     });
-  }, []);
-  
 
     gsap.to(groupRef.current.position, {
       y: "+=0.5",

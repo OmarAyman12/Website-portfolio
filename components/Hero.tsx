@@ -36,6 +36,25 @@ export default function HeroSection() {
             {/* Info Section */}
             <div className="container mx-auto px-6 py-12 flex flex-col items-center text-center">
                 <div className="flex flex-col md:flex-row md:justify-center gap-8">
+                    {/* Tetrax */}
+                    <div>
+                        <h2 className="text-xl font-semibold">Marwan Ahmed "Tetrax"</h2>
+                        <p className="text-gray-600 dark:text-gray-300">AI Software Engineer</p>
+                        <div className="flex gap-4 mt-2">
+                            <a href="https://github.com/marawan206" className="text-blue-500 hover:underline">GitHub</a>
+                            <a href="https://www.linkedin.com/in/marwan-ahmed206/" className="text-blue-500 hover:underline">LinkedIn</a>
+                        </div>
+                    </div>
+
+                    {/* Yujyro */}
+                    <div>
+                        <h2 className="text-xl font-semibold">Omar Ayman "Yujyro"</h2>
+                        <p className="text-gray-600 dark:text-gray-300">Fullstack Engineer</p>
+                        <div className="flex gap-4 mt-2">
+                            <a href="https://github.com/OmarAyman12" className="text-blue-500 hover:underline">GitHub</a>
+                            <a href="https://www.linkedin.com/in/omar-ayman-7abb37241/" className="text-blue-500 hover:underline">LinkedIn</a>
+                        </div>
+                    </div>
                 </div>
 
                 {/* Contact Button */}

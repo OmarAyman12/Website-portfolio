@@ -64,15 +64,8 @@ export default function HeroSection() {
                     </Button>
                 </div>
 
-                {/* Dark Mode Toggle */}
-                <div className="mt-6">
-                    <button
-                        onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-                        className="p-3 bg-gray-200 dark:bg-gray-800 rounded-full shadow-md hover:scale-110 transition"
-                    >
-                        {theme === "light" ? <Moon size={20} /> : <Sun size={20} />}
-                    </button>
-                </div>
+                
+                
             </div>
         </section>
     );

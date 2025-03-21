@@ -6,7 +6,7 @@ import Link from 'next/link';
 function Contact() {
   return (
     <div>
-      <Button className='bg-transparent  hover:bg-gray-900'><Link href='contact'>Contact</Link></Button>
+      <Button className='bg-transparent text-black dark:text-white hover:bg-gray-900'><Link href='contact'>Contact</Link></Button>
     </div>
   );
 }

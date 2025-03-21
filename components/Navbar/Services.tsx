@@ -5,7 +5,7 @@ import { Button } from "../ui/button";
 function Services() {
   return (
     <div>
-      <Button className="bg-transparent text-black dark:text-white hover:bg-gray-900" >
+      <Button className="bg-transparent text-black dark:text-white hover:bg-gray-400" >
         <Link href="/services">Services</Link>
       </Button>
     </div>

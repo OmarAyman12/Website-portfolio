@@ -21,8 +21,8 @@ import Link from "next/link";
 function DropDownMenu() {
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger>
-        <Button className="bg-transparent text-black dark:text-white hover:bg-gray-900">
+      <DropdownMenuTrigger asChild>
+        <Button className="bg-transparent text-black dark:text-white hover:bg-gray-400">
           <IoIosMenu />
         </Button>
       </DropdownMenuTrigger>
